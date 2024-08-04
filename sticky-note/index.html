@@ -5,22 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <div id="main_container">
     <div id="left_container">
-        <div>
-            <textarea id="textarea" rows="10" cols="30"></textarea>
+        <div class="textarea-color">
+            <textarea id="textarea" rows="10" cols="30" placeholder="//Write a note here"></textarea>
             <input type="color" name="" id="color">
         </div>
-        <div id="button">
-            <button>Add Notes</button>
+        <div id="button" class="btn1">
+            <button class="addBtn">Add Notes</button>
         </div>
     </div>
     <div id="right_container">
         <h1>Your Notes</h1>
-        <p id="message">You havn't added any notes yet.</p>
-        <div id="notes_container"></div>
+       
+        <div id="notes_container"> </div>
+        <span class="notesNotAdded">
+            <p id="message">You havn't added any notes yet.</p>
+        </span>
     </div>
    </div> 
    <script src="./script.js"></script>
