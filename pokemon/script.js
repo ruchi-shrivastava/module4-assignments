@@ -9,60 +9,80 @@ async function fetchPokemOnData(i){
     return result;
 }
 
-function createCard(pokemon){
-   let cards= document.createElement('div');
-   console.log(cards);
-   cards.classList.add('card');
-   cards.innerHTML = `
-<div class = "card-inner">
-<div class = "card-front">
-<div class="id">${pokemon.id}</div>
-<img src='${pokemon.sprites.front_default}'/>
-<div class="name">${pokemon.name}</div>
-<div class="type">${pokemon.types[0].type.name}></div>
-</div>
+// function createCard(pokemon){
+//    let cards= document.createElement('div');
+//    console.log(cards);
+//    cards.classList.add('card');
+//    cards.innerHTML = `
+// <div class = "card-inner">
+// <div class = "card-front">
+// <div class="id">${pokemon.id}</div>
+// <img src='${pokemon.sprites.front_default}'/>
+// <div class="name">${pokemon.name}</div>
+// <div class="type">${pokemon.types[0].type.name}</div>
+// </div>
 
-<div class="back-card">
-    <img src='${pokemon.sprites.back_default}'/>
-     <div class="name">${pokemon.name}</div>
-     <div class="type">${pokemon.abilities[0].ability.name}</div>
-     </div>
-     </div>
-`;
-// console.log(cards);
-return cards;
+// <div class="back-card">
+//     <img src='${pokemon.sprites.back_default}'/>
+//      <div class="name">${pokemon.name}</div>
+//      <div class="type">${pokemon.abilities[0].ability.name}</div>
+//      </div>
+//      </div>
+// `;
+// // console.log(cards);
+// return cards;
+// }
+
+// filterBtn.addEventListener("click", function(){
+//     let allCards = document.querySelectorAll(".card");
+//     allCards.forEach((card)=>{
+//         let cardType = card.querySelector(".type").textContent.trim().toLowerCase();
+//         if(cardType.includes(type.value.trim().toLowerCase())){
+//             card.style.display = "block";
+//         }else{
+//             card.style.display = "none";
+//         } 
+//     });
+// });
+
+function createCard(pokemon) {
+    let cards = document.createElement('div');
+    cards.classList.add('card');
+    cards.innerHTML = `
+    <div class="card-inner">
+        <div class="card-front">
+            <div class="id">${pokemon.id}</div>
+            <img src='${pokemon.sprites.front_default}' alt="${pokemon.name} Front Image"/>
+            <div class="name">${pokemon.name}</div>
+            <div class="type">${pokemon.types[0].type.name}</div>
+        </div>
+
+        <div class="card-back">
+            <img src='${pokemon.sprites.back_default}' alt="${pokemon.name} Back Image"/>
+            <div class="id">${pokemon.id}</div>
+            <div class="name">${pokemon.name}</div>
+            <div class="type">${pokemon.types[0].type.name}</div>
+        </div>
+    </div>
+    `;
+    return cards;
 }
+
 
 filterBtn.addEventListener("click", function(){
     let allCards = document.querySelectorAll(".card");
     allCards.forEach((card)=>{
-        let cardType = card.querySelector(".type").textContent;
+        let cardType = card.querySelector(".type").textContent.trim();
         // console.log(cardType);
         console.log(type.value);
         
-        if(cardType === type.value){
+        if(cardType.trim() === type.value.trim()){
             card.style.display = "block";
         }else{
             card.style.display = "none";
         } 
     })
 })
-
-
-// filterBtn.addEventListener("click", function(){
-//     let allCards = document.querySelectorAll(".card");
-//     allCards.forEach((card)=>{
-//         let cardType = card.querySelector(".type").textContent;
-//         // console.log(cardType);
-//         console.log(type.value);
-        
-//         if(cardType === type.value){
-//             card.style.display = "block";
-//         }else{
-//             card.style.display = "none";
-//         } 
-//     })
-// })
 
 
 searchInput.addEventListener("keyup",function(){
