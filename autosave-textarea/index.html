@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width:100%;
+        height:100vh;
+        display: flex;
+        max-width: 600;
+        flex-direction: column;
+        justify-content: center;
+       align-items: center;
+       background-color: #2f2f2f;
+       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+       
+      
+    }
+    h1{
+        text-align: center;
+        color:white;
+        box-shadow: 10px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    textarea{
+    width:60%;
+    height: 30vh;
+    margin-bottom: 50%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid gray;
+    border-radius: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Auto Save Textarea</h1>
+    <textarea id="myTextArea" row="10" cols="50" placeholder="Start typing here..."></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
