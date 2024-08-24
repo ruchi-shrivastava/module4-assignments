@@ -36,3 +36,19 @@ const myChart = new Chart(ctx,{
     
     }
 })
+
+anime({
+    targets: '#animated-heading', // Target the h1 element
+    translateY: [-50, 0], // Move from -50px to 0px on the Y-axis
+    opacity: [0, 1], // Fade in from opacity 0 to 1
+    duration: 2000, // Duration of the animation in milliseconds
+    easing: 'easeOutExpo' // Easing function for a smooth effect
+  });
+
+//   anime({
+//     targets: '#animated-heading',
+//     translateX: 250,
+//     direction: 'alternate',
+//     loop: true,
+//     easing: 'linear'
+//   });
