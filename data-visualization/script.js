@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', () => {
+    anime({
+        targets: '#animated-heading',
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        scale: [0.8, 1],
+        rotate: '0turn',
+        duration: 3000,
+        easing: 'easeOutElastic(1, .8)',
+        delay: 500, // Start after 500ms
+        loop: true // Loop the animation
+        
+      });
+  });
+
+
+
 const monthlyData = [56,78,89,98,67];
 const months = ["January","February","March","April","May"];
 
@@ -52,15 +69,15 @@ const myChart = new Chart(ctx,{
 //     loop: true,
 //     easing: 'linear'
 //   });
-anime({
-    targets: '#animated-heading',
-    translateY: [-50, 0],
-    opacity: [0, 1],
-    scale: [0.8, 1],
-    rotate: '0turn',
-    duration: 3000,
-    easing: 'easeOutElastic(1, .8)',
-    delay: 500, // Start after 500ms
-    loop: true // Loop the animation
+// anime({
+//     targets: '#animated-heading',
+//     translateY: [-50, 0],
+//     opacity: [0, 1],
+//     scale: [0.8, 1],
+//     rotate: '0turn',
+//     duration: 3000,
+//     easing: 'easeOutElastic(1, .8)',
+//     delay: 500, // Start after 500ms
+//     loop: true // Loop the animation
     
-  });
+//   });
