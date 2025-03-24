@@ -1,0 +1,136 @@
+/* details page css */
+
+.coins-details{
+    width:100%;
+    height:auto;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-grow: 1;
+    /* flex-wrap: wrap; */
+}
+.img-container{
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    /* padding: 90px; */
+}
+.img-container #logo{
+width:180px;
+height: 180px;
+}
+.img-container h3{
+    padding-top: 50px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+}
+
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    width:90%;
+    padding: 90px;
+    /* overflow-y: auto; */
+    /* border: 1px solid red; */
+}
+.info-container h1{
+    font-size: 25px;
+    color:orange
+}
+.desc{
+    width: 90%;
+    min-height: 200px;
+    text-align: justify;
+    max-height: 40vh;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-bottom: 20px;
+    padding: 10px
+   
+    /* overflow-y: auto; */
+}
+#description{
+    width:100%;
+    height: 40vh;
+    /* border: 1px solid red; */
+    /* text-align:justify; */
+} 
+
+
+.bold{
+   color:#e1a132;
+   font-size: 1.5em;
+   display: flex;
+  margin: 1.5rem 0;
+  text-align: justify;
+}
+.currency{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media(max-width:768px){
+    .coins-details{
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     padding: 20px;
+    }
+    .img-container{
+        width: 100%;
+   padding: 20%;
+    
+
+    }
+    .img-container #logo{
+       
+      width:120px;
+      height: 120px;
+     
+    }
+
+    .img-container h3{
+     
+    }
+
+    .info-container{
+        width: 90%;
+       padding: 20%;
+    }
+    .currency {
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+    }
+    .info-container #name{
+     font-size: 23px;
+    
+ }
+ .desc {
+    width: 90%;
+    text-align: justify;
+    /* height: auto; ✅ Allow content to expand */
+    overflow-y: auto;
+    max-height: unset;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#description {
+    font-size: 16px;
+    color: black;
+    line-height: 1.5;
+    display: block; /* ✅ Ensures it is visible */
+}
+.bold{
+    font-size: 1.2em
+}
+    
+}

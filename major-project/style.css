@@ -1,0 +1,581 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+};
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width:100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* .container{
+    width: 100vw;
+    height: 100vh;
+} */
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding:10px 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better UI */
+}
+.right{
+    display: flex;
+    align-items: center;
+    gap:0.8rem;
+    flex-wrap: nowrap;
+}
+.right h1 {
+    font-size: 24px;
+    white-space: nowrap
+}
+img{
+    width:40px;
+    height:40px;
+}
+#btn{
+    border: 1px solid orange;
+    width:8rem;
+    height:2.5rem;
+    /* text-align: center; */
+    padding: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+#btn:hover{
+    background-color: orange;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ✅ Mobile Responsive (For screens below 768px) */
+@media (max-width: 768px) {
+     nav {
+        padding: 10px;
+    }
+
+    .right h1 {
+        font-size: 18px;
+    }
+
+    #btn {
+        width: 7rem;
+        height: 2.2rem;
+        font-size: 16px;
+    }
+}
+
+/* main section */
+
+main{
+    background-color: #e5e5e5;
+    width: 100%;
+    /* height: 50vh; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 40vh;
+    padding: 20px;
+    gap: 2rem;
+}
+
+.cryptoView{
+     width: 40%;
+     min-width: 300px; 
+     text-align: left;
+    /* border: 1px solid red; */
+   
+}
+.cryptoView h2{
+    margin-left: 4rem;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(0 111 133);
+    /* text-align: left; */
+    
+}
+.cryptoView p{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 60px;
+    /* border: 1px solid red; */
+}
+
+.main-section{   
+  /* height:auto; */
+  /* background-color: #4e9700; */
+}
+main img{
+    width: 40%;
+    min-width: 300px;
+    height: auto;
+
+    /* margin-bottom: 0; */
+    
+}
+@media(max-width:768) {
+    main{
+     flex-direction: column;
+     text-align: center;
+    }
+    .cryptoView{
+    width: 90%;
+    }
+    main img{
+    width: 80%;
+    }
+}
+
+.slider-section{
+    width: 100%;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    padding: 20px 0;
+    /* border: 2px solid red; */
+   
+}
+.slider-section h1{
+    text-align: center;
+    color: #e1a132;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    /* padding-top: 50px; */
+}
+
+.card{
+    /* border: 1px solid red; */
+}
+
+#card-container{
+   width: 100%;
+     /* border: 1px solid red; */
+    height: 40vh;
+    display: flex;
+    flex-wrap: nowrap;
+/* overflow-x: auto; */
+scrollbar-width: none;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 80px;
+}
+.crypto-card{
+    flex: 0 0 auto;
+    width: 260px;
+    
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+     /* border: 1px solid red; */
+    gap:1rem;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   
+}
+
+.card-horizontal{
+  display: flex;
+  flex-direction: row;
+    /* gap: 1rem;
+    animation: slide 20s linear infinite alternate; */
+    gap: 1rem;
+    animation: slide 20s linear infinite;
+    position: relative;
+}
+
+@keyframes slide {
+    0% {
+      right: 0px;
+    }
+  
+    100% {
+      right: 100%;
+    }
+  }
+
+  
+
+  /* add css for card and currency from script.js file where classlist is a crypto-card */
+
+  .crypto-card h3{
+    font-size: 18px;
+    white-space: nowrap; 
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+  }
+  .crypto-card span{
+    color:#4e9700;
+    font-weight: bold;
+  }
+  
+ /* Search page  */
+ .container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #e2ebf1;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+ }
+ 
+ section h2{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+    color:black;
+    margin: 15px;
+ }
+section form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px; 
+    gap:10px;
+    flex-wrap: wrap;
+}
+ .input-search{
+    border: 2px solid gary;
+    min-width:250px;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(116, 157, 102);
+    outline: none;
+ }
+ #search-btn{
+    width:100px;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    border: 2px solid rgb(116, 157, 102);
+    background-color: #4e9700;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+ }
+ #search-btn:hover {
+    background-color: #3b6e00;
+    transform: scale(1.05);
+}
+
+ #info-container{
+    /* background-color:#e5e5e5; */
+    width: 90%;
+    padding: 10px;
+    /* border: 1px solid red; */
+    display: flex;  
+    flex-direction: column; 
+     justify-content: center;
+     align-items: center;
+    margin: 20px auto; 
+    flex-grow: 1;
+ }
+ .coin-card{
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    background-color: white;
+    gap:10px;
+    margin: 10px auto;
+    align-items: center;
+    font-size:16px;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ #moreInfoBtn{
+    margin-left: auto;
+    border: 1px solid black;
+    font-size: 16px;
+    width: 120px;
+    padding: 7px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #4e9700;
+    color: white;
+    cursor: pointer;
+ }
+
+ #moreInfoBtn:hover {
+    background-color: #3b6e00;
+}
+/* ✅ Loader */
+/* #loader {
+    height: 100px;
+    width: 100px;
+    margin: 40px auto;
+    display: none;
+} */
+
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 24px;
+    }
+
+    .input-search {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    #search-btn {
+        width: 100px;
+        font-size: 16px;
+    }
+
+    .coin-card {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    #moreInfoBtn {
+        width: 100px;
+        font-size: 14px;
+    }
+}
+
+/* details page css */
+
+.coins-details{
+    width:100%;
+    height:100vh;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.img-container{
+    width: 30%;
+    padding: 50px;
+}
+.img-container #logo{
+width:180px;
+height: 180px;
+}
+.img-container h3{
+    padding-top: 50px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+}
+
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    width:90%;
+    padding: 80px;
+    flex-grow: 1;
+    overflow: auto;
+    /* border: 1px solid red; */
+}
+.info-container h1{
+    font-size: 25px;
+    color:orange
+}
+/* .desc{
+    width: 90%;
+    text-align: justify;
+    max-height: 40vh;
+    overflow-y: auto;
+} */
+#description{
+    display: block;
+    overflow: visible;
+    width:100%;
+    max-height: none;
+    /* border: 1px solid red; */
+    text-align:justify;
+}
+
+.desc {
+    width: 90%;
+    min-height: 100px; /* Ensure it's not collapsed */
+    max-height: none;
+    overflow-y: auto;
+    padding: 10px;
+    text-align: justify;
+}
+
+
+.bold{
+   color:#e1a132;
+   font-size: 1.5em;
+  margin: 1.5rem 0;
+}
+.currency{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media(max-width:768px){
+    .coins-details{
+    min-height: 100vh;
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     padding: 20px;
+    }
+    .img-container{
+        width: 100%;
+   padding: 20%;
+    
+
+    }
+    .img-container #logo{
+       
+      width:120px;
+      height: 120px;
+     
+    }
+
+    .img-container h3{
+     
+    }
+
+    .info-container{
+        width: 90%;
+       padding: 20%;
+       flex-grow: 1;
+       /* display: flex;
+       align-items: center; */
+       /* min-height: auto; */
+       overflow-y:auto;
+    }
+    .currency {
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+    }
+    .info-container #name{
+     font-size: 23px;
+    
+ }
+ .info-container .bold{
+    font-size: 23px;
+   
+}
+ /* .desc {
+    width: 100%;
+    min-height: auto; 
+} */
+.desc {
+    width: 100%;
+    display: block;
+    overflow: visible;
+    min-height: auto;
+    max-height: none;
+    padding: 10px;
+}
+    #description{
+        width:100%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        /* border: 1px solid red; */
+        /* text-align:justify; */
+    }
+    .footer {
+        position: relative; /* Keeps it inside */
+        width: 100%;
+        margin-top: auto; /* Pushes it to the bottom */
+    }
+}
+
+/* footer */
+
+footer{
+    background-color: #f8f9fa; /* Light background */
+    color: #333;
+ padding:5px;
+ text-align: center;
+ width: 100%;
+ margin-top: auto;
+ position: relative;
+ bottom: 0;
+}
+
+.footerText{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap;
+   align-items: center;
+   /* margin-top: 1em; */
+}
+.footerText .left{
+    margin-left: 10px;
+}
+.footerText .right{
+display: flex;
+align-items: center;
+
+}
+.footerText p{
+    font-size: 20px;
+    margin: 5px 0; /* Add spacing for better readability */
+    text-align: center;
+}
+#gitLogo{
+    /* width:40px;
+    height: 40px;
+    margin-right: 1rem;
+    border-radius: 20%; */
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+#gitLogo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+    
+    .footerText {
+        flex-direction: column;
+        text-align: center;
+    }
+    .right {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #gitLogo {
+        margin-left: 0;
+    }
+}
+
+
+

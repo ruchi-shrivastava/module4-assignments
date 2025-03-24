@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <div class="right">
+            <img id="logoImg" src="./image/logo.png" alt="logo-img" />
+           <h1>CryptoView</h1>
+        </div>
+       <button id="btn">Search</button>
+    </nav>
+    
+    <section class="main">
+        <h2>Welcome to <span style="color:orange;">CryptoView</span> </h2>
+        <form id="searchForm">
+            <input type="search" id="inputBox" placeholder="Enter Coin Name..." class="input-search">
+            <button type="submit" id="search-btn">Search</button>
+         </form>
+        <!-- <hr> -->
+    </section>
+
+    <img src="./image/loader.gif" id="loader" style="height: 100px; width: 100px;margin:40px 40%; display: none;">
+        <section id="info-container">
+               
+        </section>
+       
+    
+    
+    </div>
+    <footer>
+        <div class="footerText">
+         <p class="left">© CryptoView | All Rights Reserved - 2024</p>
+         <div class="right">
+          <p>Developed By Ruchi</p>
+          <img id="gitLogo" src="./image/gitlogo.png"></img>
+         </div>
+        </div>
+    </footer>
+   
+    <script src="./common.js"></script>
+    <script src="./search.js"></script>
+</body>
+</html>
